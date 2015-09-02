@@ -1,1 +1,69 @@
-# fituprising-university
+# Getting Started
+
+Clone the repo and run:
+
+```bash
+sudo npm install
+```
+
+You will need to make a file called `lib/dbconfig.js`.  In the file, you need to put this:
+
+```javascript
+//DB stuff
+var mysql = require('mysql')
+
+module.exports.connection = mysql.createConnection({
+	host: "localhost",
+	user : "root",
+	password : "password",
+	database : "fituprising"
+});
+
+module.exports.knex = require('knex')({
+    client: 'mysql',
+    connection: {
+        host     : 'localhost',
+        user     : 'root',
+        password : 'password',
+        database : 'fituprising',
+        charset  : 'utf8'
+  }
+});
+```
+Changing the username and password for your database.
+
+For the intial testing of the model, create a new database called `fituprising` in MySQL and put the User Table in:
+
+```sql
+CREATE SCHEMA IF NOT EXISTS `fituprising` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `fituprising` ;
+
+-- -----------------------------------------------------
+-- Table `fituprising`.`User`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `fituprising`.`User` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `firstName` VARCHAR(50) NOT NULL,
+  `lastName` VARCHAR(100) NOT NULL,
+  `creationDate` TIMESTAMP NULL,
+  `registered` TINYINT(1) NOT NULL,
+  `registrationDate` TIMESTAMP NULL,
+  `registrationId` BIGINT UNSIGNED NULL,
+  `profileImageId` BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  `deactivated` TINYINT(1) NOT NULL,
+  `admin` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'The admin field is set if the user is an administrator. Administrators have access to information to which regular users may not have access.',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+ENGINE = InnoDB;
+```
+
+Then start the server:
+
+```bash
+nodemon app.js
+```
+
+
+
