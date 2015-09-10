@@ -1,26 +1,15 @@
 {
-  "name": "fituprisingU",
+  "name": "fituprisingU-frontend",
   "version": "0.0.1",
-  "description": "FitUprising Platform",
+  "description": "FitUprising Platform Frontend",
   "author": "BJ Yurkovich",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.4.5",
+    "angular-cookies": "^1.4.5",
     "angular-route": "^1.4.5",
-    "body-parser": "^1.13.3",
-    "bookshelf": "^0.8.2",
-    "cors": "^2.7.1",
     "express": "^4.13.3",
-    "jwt-simple": "^0.3.1",
-    "knex": "^0.8.6",
-    "lodash": "^3.10.1",
-    "moment": "^2.10.6",
-    "mysql": "^2.9.0",
-    "n": "^2.0.2",
-    "path": "^0.11.14",
-    "stripe": "^3.7.1",
-    "tv4": "^1.2.5",
-    "when": "^3.7.3"
+    "moment": "^2.10.6"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",

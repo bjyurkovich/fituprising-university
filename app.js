@@ -6,6 +6,7 @@ var app = express();
 
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var path = require('path');
 /*var compression = require('compression');*/
 
 app.use(cors());
@@ -21,6 +22,7 @@ var auth = require('./lib/auth');
 //API route includes
 var login = require('./routes/login');
 var user = require('./routes/user');
+var payments = require('./routes/payments');
 
 
 //FRONTEND ROUTE
@@ -31,6 +33,7 @@ app.get('/', function (req, res) {
 });
 
 
+
 //BACKEND API ROUTES
 app.post('/api/login', login.login);
 
@@ -38,6 +41,10 @@ app.get('/api/user/:userId', auth.jwtAuth, auth.verifySameIdAsUser, user.getUser
 app.post('/api/user/', user.addUser);
 app.put('/api/user/:userId', auth.jwtAuth, auth.verifySameIdAsUser, user.updateUser);
 app.put('/api/user/:userId/password', auth.jwtAuth, auth.verifySameIdAsUser, user.updateUserPassword);
+
+
+app.post('/api/pay', payments.makePayment);
+app.post('/', payments.getPaymentToken);
 
 
 
