@@ -16,12 +16,12 @@ app.use(bodyParser.json());
 
 var db = require('./lib/dbconfig');
 var config = require('./lib/configs');
-var auth = require('./lib/auth');
+var auth = require('./lib/auth')(db);
 
 
 //API route includes
-var login = require('./routes/login');
-var user = require('./routes/user');
+var login = require('./routes/login')(db);
+var user = require('./routes/user')(db);
 var payments = require('./routes/payments');
 
 
