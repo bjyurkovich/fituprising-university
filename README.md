@@ -16,7 +16,7 @@ module.exports.connection = mysql.createConnection({
 	host: "localhost",
 	user : "root",
 	password : "password",
-	database : "fituprising"
+	database : "fituprisingU"
 });
 
 module.exports.knex = require('knex')({
@@ -25,7 +25,7 @@ module.exports.knex = require('knex')({
         host     : 'localhost',
         user     : 'root',
         password : 'password',
-        database : 'fituprising',
+        database : 'fituprisingU',
         charset  : 'utf8'
   }
 });
