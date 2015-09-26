@@ -38,7 +38,7 @@ To load the database,
 mysql -u root -p < data/data-model.sql
 ```
 
-To see the DB with initial data:
+To seed the DB with initial data:
 
 ```bash
 mysql -u root -p < data/initialData.sql
