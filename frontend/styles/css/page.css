@@ -1,0 +1,33 @@
+.fu-font {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.choosable {
+  cursor: pointer;
+}
+body {
+  font: normal 10px Arial, sans-serif;
+}
+.page {
+  display: flex;
+  flex-flow: column;
+}
+.page .header {
+  flex: none;
+  order: 1;
+  background-color: white;
+  padding: 10px 10px;
+}
+.page .body {
+  flex: 1 1;
+  order: 2;
+  background-color: #e6e6e6;
+  padding: 10px 10px;
+  min-height: 500px;
+}
+.page .footer {
+  flex: none;
+  order: 3;
+  background-color: white;
+  padding: 10px 10px;
+  min-height: 100px;
+}

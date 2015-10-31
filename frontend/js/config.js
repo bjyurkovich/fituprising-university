@@ -20,7 +20,7 @@ fitupU.config(function($routeProvider, $locationProvider) {
             templateUrl : 'views/login.html',
         
         })
-        .when('payment', {
+        .when('/payment', {
             templateUrl : 'views/pay.html',
         
         });

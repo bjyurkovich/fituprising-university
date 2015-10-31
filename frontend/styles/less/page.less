@@ -1,0 +1,44 @@
+@import "common.less";
+@dbg-flg: false;
+
+@header-height: 100px;
+@body-height: 500px;
+@footer-height: 100px;
+
+@header-background: white;
+@body-background: #E6E6E6;
+@footer-background: white;
+
+@padding-lr : 10px;
+@padding-tb: 10px;
+
+// set default font
+body {
+    font: normal 10px Arial, sans-serif;
+}
+.page {
+
+	display: flex;
+	flex-flow:column;
+
+	.header { 
+		.dbg-border(@dbg-flg, lightgray, solid);
+		flex: none; order: 1;
+		background-color: @header-background;
+		padding : @padding-tb @padding-lr;
+	}
+	.body {	
+		.dbg-border(@dbg-flg, lightgray, solid);
+		flex: 1 1;  order: 2;
+		background-color: @body-background;
+		padding : @padding-tb @padding-lr;
+		min-height: @body-height; 
+	}
+	.footer {
+		.dbg-border(@dbg-flg, lightgray, solid);
+		flex: none; order: 3;	   
+		background-color: @footer-background;		
+		padding : @padding-tb @padding-lr;
+		min-height: @footer-height; 
+	}
+}

@@ -1,0 +1,21 @@
+<div class="header-container"
+	 ng-controller="HdrController">
+
+	<div class="logo-container"
+		 ng-click="onLogoClick()">
+		<img src="resources/fitu-logo.png" width=200>		
+	</div>
+
+	<div class="menu-container">
+
+		<div class="menu-item"
+			  ng-repeat="menuItem in hrdMenu track by $index"
+			  ng-class="{'hdr-menu-text-sel' : $index === menuSelIdx, 
+			             'hdr-menu-text'     : $index !=  menuSelIdx,
+ 			             'menu-border'       : $index < hrdMenu.length-1 }"
+		 	  ng-click="onMenuClick($index)">			             
+ 			  {{ menuItem.text }}
+		</div>
+	</div>
+
+</div>

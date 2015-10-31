@@ -1,23 +1,62 @@
-<!DOCTYPE html>
+
 <html>
-<head>
+<head <!DOCTYPE html>
+
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
-	<script src="node_modules/angular/angular.js" type="text/javascript" charset="utf-8" ></script>
-	<script src="node_modules/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="node_modules/angular-cookies/angular-cookies.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+	<meta http-equiv="X-UA-Compatible" 
+	      content="IE=edge">
+
+	<title>fitUprising University</title>
+
+	<link rel="stylesheet" 
+		  href="styles/css/page.css">
+	<link rel="stylesheet" 
+	      href="styles/css/header.css">
+	
+	<!-- third party scripts -->
+	<script src="node_modules/angular/angular.js" 
+	        type="text/javascript" 
+	        charset="utf-8" ></script>
+	<script src="node_modules/angular-route/angular-route.min.js"
+	        type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/angular-cookies/angular-cookies.min.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+
+	<!-- our scripts scripts -->
+	<script src="js/config.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+	<script src="js/controllers/HdrController.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+	<script src="js/controllers/LoginController.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+	<script src="js/services/DbgService.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
 
 	<base href="/">
+
 </head>
 <body>
 
+<div class="page" ng-app="fitupU">
 
-<div ng-app="fitupU">
-	 <div ng-view></div>
+	<div class="header"
+		 ng-include="'views/header.html'">
+	</div>
+
+	<div class="body">
+		 <div ng-view></div>
+	</div>
+		
+	<div class="footer">
+		FOOTER
+	</div>
+
 </div>
-	
+
 </body>
 </html>

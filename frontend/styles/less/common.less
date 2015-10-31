@@ -1,0 +1,45 @@
+
+//
+// Colors and fonts
+//
+
+@fu-purple: #723A83;
+@fu-green: #84BF41;
+
+// 
+// Styles
+// 
+
+.fu-font {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.choosable {
+	cursor: pointer; 
+}
+
+
+//
+// Mixins
+//
+
+// can be overridden in other .less files
+@dbg-flg: false;
+
+// show border if @dbg-flg is true
+.dbg-border( 
+		 	 @dbg-borders-flg, 
+	         @dbg-border-clr, 
+	         @dbg-border-style) 
+			 when (@dbg-borders-flg=true) {
+	border: 3px @dbg-border-style @dbg-border-clr; 
+	margin: 1px; padding: 1px;
+}
+
+.set-text(@color, 
+		  @font-size, 
+		  @font-weight, 
+		  @text-align) {
+	color:@color; font-size:@font-size; 
+	font-weight:@font-weight; text-align:@text-align;
+}

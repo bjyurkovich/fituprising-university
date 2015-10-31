@@ -1,0 +1,43 @@
+@import "common.less";
+@dbg-flg: false;
+
+.hdr-menu-text {
+	.set-text(@fu-green, medium, normal, center);
+}
+
+.hdr-menu-text-sel {
+	.set-text(@fu-purple, medium, normal, center);
+	// text-decoration: underline;
+}
+
+.header-container { 
+	.dbg-border(@dbg-flg, black, solid);  
+
+	display: flex;
+	flex-flow:row nowrap;
+	// padding : 10px 15px; // TB RL
+
+	.logo-container { 
+		.dbg-border(@dbg-flg, black, solid);  
+		flex: 1 1 auto; order: 1;  
+	    .choosable;		
+	}
+	.menu-container { 
+		.dbg-border(@dbg-flg, black, solid);
+		flex: 1 1 auto; order: 2;
+	
+		display: flex;
+		flex-flow:row nowrap;
+	    align-items: center;
+	    justify-content: flex-end;		
+
+		.menu-item {
+			.dbg-border(@dbg-flg, red, solid);
+			padding : 0px 15px; // TB RL
+			.choosable;
+		}
+		.menu-border {
+			border-right: 2px solid lightgray;
+		}		
+	}
+}

@@ -1,0 +1,42 @@
+.fu-font {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.choosable {
+  cursor: pointer;
+}
+.hdr-menu-text {
+  color: #84bf41;
+  font-size: medium;
+  font-weight: normal;
+  text-align: center;
+}
+.hdr-menu-text-sel {
+  color: #723a83;
+  font-size: medium;
+  font-weight: normal;
+  text-align: center;
+}
+.header-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.header-container .logo-container {
+  flex: 1 1 auto;
+  order: 1;
+  cursor: pointer;
+}
+.header-container .menu-container {
+  flex: 1 1 auto;
+  order: 2;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-container .menu-container .menu-item {
+  padding: 0px 15px;
+  cursor: pointer;
+}
+.header-container .menu-container .menu-border {
+  border-right: 2px solid lightgray;
+}
