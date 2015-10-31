@@ -1,11 +1,6 @@
-console.log("... loading Hdr Controller");
-
 (function() {
 
 var HdrController = function($scope, $location, dbg ) {
-
-	dbg.p("entering HdrController()")
-
 
 	// Header menus and routes
 	$scope.menuSelIdx = 0;
@@ -27,16 +22,12 @@ var HdrController = function($scope, $location, dbg ) {
 	gotoDefaultMenu();
 
 	$scope.onLogoClick = function() {
-		dbg.p("clicked logo");
 		gotoDefaultMenu();
 	}
 
 	$scope.onMenuClick = function(idx) {
-
-		dbg.p("clicked menu " + $scope.hrdMenu[idx].text);
 		if ( idx === $scope.menuSelIdx )
 			return;
-
 		$scope.menuSelIdx = idx;
 		$location.path($scope.hrdMenu[idx].route);
 	}
