@@ -13,7 +13,11 @@ fitupU.value('config', serviceHost);
 fitupU.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl : 'views/dashboard.html'
+            templateUrl : 'views/landing.html'
+            
+        })
+        .when('/details', {
+            templateUrl : 'views/details.html'
             
         })
         .when('/login', {
@@ -21,7 +25,7 @@ fitupU.config(function($routeProvider, $locationProvider) {
         
         })
         .when('/payment', {
-            templateUrl : 'views/pay.html',
+            templateUrl : 'views/payment.html',
         
         });
         

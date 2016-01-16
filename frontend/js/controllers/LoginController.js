@@ -1,6 +1,7 @@
 (function() {
 
 var LoginController = function($scope, dbg ) {
+	dbg.p("---> in LoginController");
 
 };
 

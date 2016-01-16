@@ -1,0 +1,84 @@
+.fu-font {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.choosable {
+  cursor: pointer;
+}
+.details-container {
+  border: 3px solid black;
+  margin: 1px;
+  padding: 1px;
+  padding: 20px 25px;
+}
+.details-container .title-container {
+  border: 3px solid blue;
+  margin: 1px;
+  padding: 1px;
+}
+.details-container .title-container .course-name {
+  color: #92278f;
+  font-size: x-large;
+  font-weight: normal;
+  text-align: left;
+}
+.details-container .title-container .instructor {
+  color: black;
+  font-size: small;
+  font-weight: normal;
+  text-align: left;
+}
+.details-container .overview-container {
+  border: 3px solid blue;
+  margin: 1px;
+  padding: 1px;
+  padding: 15px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.details-container .overview-container .image-container {
+  border: 3px solid gray;
+  margin: 1px;
+  padding: 1px;
+  flex: 1 1 30%;
+  order: 1;
+}
+.details-container .overview-container .content-container {
+  border: 3px solid gray;
+  margin: 1px;
+  padding: 1px;
+  flex: 1 1 70%;
+  order: 2;
+}
+.details-container .overview-container .content-container .tab-container {
+  border: 3px solid orange;
+  margin: 1px;
+  padding: 1px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.details-container .overview-container .content-container .tab-container .left {
+  border: 3px solid yellow;
+  margin: 1px;
+  padding: 1px;
+  flex: 1 1 auto;
+  order: 1;
+}
+.details-container .overview-container .content-container .tab-container .middle {
+  border: 3px solid yellow;
+  margin: 1px;
+  padding: 1px;
+  flex: 1 1 auto;
+  order: 2;
+}
+.details-container .overview-container .content-container .tab-container .right {
+  border: 3px solid yellow;
+  margin: 1px;
+  padding: 1px;
+  flex: 1 1 auto;
+  order: 3;
+}
+.details-container .overview-container .content-container .desc-container {
+  border: 3px solid orange;
+  margin: 1px;
+  padding: 1px;
+}

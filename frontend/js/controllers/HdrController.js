@@ -1,19 +1,15 @@
 (function() {
 
 var HdrController = function($scope, $location, dbg ) {
+	dbg.p("---> in HdrController");
 
 	// Header menus and routes
 	$scope.menuSelIdx = 0;
 	$scope.hrdMenu = [ 
-		{   "text"  : "home",
-		    "route" : "" 
-		},
-		{   "text"  : "login",
-		  	"route" : "login"
-		},
-		{   "text"  : "pay",
-		  	"route" : "payment"
-		}];
+		{  "text"  : "home",    "route" : "" },
+		{  "text"  : "details", "route" : "details" },
+		{  "text"  : "login",   "route" : "login" },
+		{  "text"  : "pay",     "route" : "payment"}];
 
 	gotoDefaultMenu = function () {
 		$scope.menuSelIdx = 0;

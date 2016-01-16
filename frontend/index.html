@@ -12,6 +12,10 @@
 		  href="styles/css/page.css">
 	<link rel="stylesheet" 
 	      href="styles/css/header.css">
+	<link rel="stylesheet" 
+	      href="styles/css/landing.css">
+	<link rel="stylesheet" 
+	      href="styles/css/details.css">
 	
 	<!-- third party scripts -->
 	<script src="node_modules/angular/angular.js" 
@@ -23,14 +27,23 @@
 			type="text/javascript" 
 			charset="utf-8"></script>
 
-	<!-- our scripts scripts -->
+	<!-- our scripts -->
 	<script src="js/config.js" 
 			type="text/javascript" 
 			charset="utf-8"></script>
 	<script src="js/controllers/HdrController.js" 
 			type="text/javascript" 
 			charset="utf-8"></script>
+	<script src="js/controllers/LandingController.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+	<script src="js/controllers/DetailsController.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
 	<script src="js/controllers/LoginController.js" 
+			type="text/javascript" 
+			charset="utf-8"></script>
+	<script src="js/controllers/PaymentController.js" 
 			type="text/javascript" 
 			charset="utf-8"></script>
 	<script src="js/services/DbgService.js" 
@@ -40,23 +53,24 @@
 	<base href="/">
 
 </head>
+
 <body>
 
-<div class="page" ng-app="fitupU">
+	<div class="page" ng-app="fitupU">
 
-	<div class="header"
-		 ng-include="'views/header.html'">
-	</div>
+		<div class="header"
+			 ng-include="'views/header.html'">
+		</div>
 
-	<div class="body">
-		 <div ng-view></div>
-	</div>
-		
-	<div class="footer">
-		FOOTER
-	</div>
+		<div class="body">
+			 <div ng-view></div>
+		</div>
+			
+		<div class="footer">
+			FOOTER
+		</div>
 
-</div>
+	</div>
 
 </body>
 </html>

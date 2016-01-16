@@ -1,0 +1,11 @@
+.fu-font {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.choosable {
+  cursor: pointer;
+}
+.landing-container {
+  border: 3px solid black;
+  margin: 1px;
+  padding: 1px;
+}
