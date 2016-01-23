@@ -1,0 +1,119 @@
+@import "common.less";
+@dbg-flg: false;
+
+@video-width: 250px;
+
+.course-container {
+	.dbg-border(@dbg-flg, black, solid);
+	padding : 20px 25px; // TB RL
+
+	.tab { 
+		background-color: @fu-lite-purple;
+		text-align: center;
+		margin: 3px;
+		padding: 3px;
+		height: 20px;
+		max-width: 150px;
+		.Aligner;
+		.choosable;
+	}
+	.tab-text { 
+		.set-text(@fu-lite-green, small, normal, center);
+	}
+
+	.module-title-text {
+		.set-text(@fu-lite-purple, small, bold, center);
+		text-align: left
+	}
+
+	.video {
+		width: @video-width;
+	}
+
+	.banner {
+		.dbg-border(@dbg-flg, magenta, solid);
+/*		display: flex;
+		flex-flow:row nowrap;
+		align-items: flex-start;
+*/
+		.title-container {
+			.dbg-border(@dbg-flg, blue, solid);
+			/*flex: 1 1 30%; order: 1;*/
+			min-width: 300px;
+
+			.course-name { .set-text(@fu-lite-purple, x-large, normal, left); }
+			.instructor { .set-text(black, small, normal, left);}
+		}
+/*		.header-container {
+			.dbg-border(@dbg-flg, blue, solid);			
+			flex: 1 1 70%; order: 2;
+			justify-content: center;
+			.header-text { 
+				.set-text(gray, medium, normal, center); 
+				
+			}
+		}
+*/
+	}
+	.course-container {
+		.dbg-border(@dbg-flg, blue, solid);
+		padding : 15px 0px; // TB RL
+
+		.module-container {
+			.dbg-border(@dbg-flg, green, solid);
+			display: flex;
+			flex-flow:row nowrap;
+
+			padding: 20px 0px;  // TB RL
+			border-top: 3px solid @fu-lite-green; 
+
+			.video-container {
+				.dbg-border(@dbg-flg, gray, solid);
+				max-width: @video-width;
+				flex: 1 1 auto; order: 1;
+				margin-right: 40px;
+			}
+			.content-container {
+				.dbg-border(@dbg-flg, gray, solid);
+				flex: 1 1 auto; order: 2;
+
+				//display: flex;
+				//flex-flow: column wrap;
+
+
+				.module-title {
+					.dbg-border(@dbg-flg, orange, solid);
+					//flex: 1 1 auto; order: 1;
+					.module-title-text;
+				}
+				.desc-container {
+					.dbg-border(@dbg-flg, orange, solid);
+					//flex: 1 1 auto; order: 2;
+					min-height: 90px;
+					max-height: 90px;
+					overflow-y: scroll;
+				}
+				.tab-container {
+					.dbg-border(@dbg-flg, orange, solid);
+					//flex: 1 1 auto; order: 3;
+
+					display: flex;
+					flex-flow:row nowrap;
+					.left {
+						.dbg-border(@dbg-flg, yellow, solid);
+						flex: 1 1 auto; order: 1;
+						.tab;
+
+					}
+					.right {
+						.dbg-border(@dbg-flg, yellow, solid);
+						flex: 1 1 auto; order: 2;
+						.tab;			
+
+					}
+
+				}
+			}
+		}
+	}
+}

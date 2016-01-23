@@ -4,9 +4,12 @@
 //
 
 @fu-purple: #723A83;
-@fu-lite-purple: #92278F ;
+@fu-lite-purple: #92278F;
 
 @fu-green: #84BF41;
+@fu-lite-green: #8CC63F;
+
+@fu-teal: #008080;
 
 // 
 // Styles
@@ -18,6 +21,34 @@
 
 .choosable {
 	cursor: pointer; 
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  min-height: 1em;
+  justify-content: center;
+}
+
+.Aligner-item {
+  flex: 1;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.Aligner-item--center {
+  align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
 }
 
 

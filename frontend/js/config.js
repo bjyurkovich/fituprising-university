@@ -14,10 +14,10 @@ fitupU.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl : 'views/landing.html'
-            
+            //templateUrl : 'views/course.html'
         })
-        .when('/details', {
-            templateUrl : 'views/details.html'
+        .when('/course', {
+            templateUrl : 'views/course.html'
             
         })
         .when('/login', {

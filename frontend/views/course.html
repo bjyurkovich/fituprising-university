@@ -1,0 +1,50 @@
+<div class="course-container"
+ng-controller="CourseController">
+
+<div class="banner">
+
+	<div class="title-container">
+		<div class="course-name">Small Steps, Big Changes : Course Content</div>
+		<div class="instructor">Dr. Drew Brazier</div>
+	</div>
+<!-- 
+	<div class="header-container">
+		<span class="header-text">Course Content</span>
+	</div>
+ -->
+</div>
+
+
+<div class="course-container">
+
+	<div class="module-container"
+		 ng-repeat="module in modules track by $index">
+
+		<div class="video-container">
+			<img class="video" src="resources/dr-drew.png">		
+		</div>
+
+		<div class="content-container">
+
+			<div class="module-title">
+				Video {{ $index+1 }} : {{ module.title }}
+			</div>
+
+			<div class="desc-container">
+				{{ module.desc }}
+			</div>
+
+			<div class="tab-container">
+				<div class="left"
+				     ng-click="onWatchTabClick()">
+					<span class="tab-text" 
+					>Watch Now</span>
+				</div>
+				<div class="right"
+				     ng-click="onPreviewTabClick()">
+					<span class="tab-text">Preview</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

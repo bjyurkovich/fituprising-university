@@ -1,6 +1,38 @@
 <div class="landing-container"
      ng-controller="LandingController">
 
-landing page
+<div class="title-container">
+	<div class="course-name">Small Steps, Big Changes : Overview</div>
+	<div class="instructor">Dr. Drew Brazier</div>
+</div>
+
+<div class="overview-container">
+
+	<div class="video-container">
+		<img class="video" src="resources/dr-drew.png">		
+	</div>
+
+	<div class="content-container">
+
+		<div class="tab-container">
+			<div class="left choosable"
+			     ng-click="onFocusTabClick()">
+				<span class="tab-text">About Dr. Drew</span>
+			</div>
+
+			<div class="middle choosable"
+			     ng-click="onFocuesTabClick()">
+				<span class="tab-text">Dr. Drew's Focus</span>
+			</div>
+			<div class="right choosable"
+			     ng-click="onCourseTabClick()">
+				<span class="tab-text">Course Information</span>
+			</div>
+		</div>
+
+		<div class="desc-container">
+			{{ overviewText }}
+		</div>
+	</div>
 
 </div>

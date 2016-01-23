@@ -8,7 +8,7 @@ module.exports = function (grunt) {
           'styles/css/page.css': 'styles/less/page.less',
           'styles/css/header.css': 'styles/less/header.less',
           'styles/css/landing.css': 'styles/less/landing.less',
-          'styles/css/details.css': 'styles/less/details.less'          
+          'styles/css/course.css': 'styles/less/course.less'          
         }
       }
     },

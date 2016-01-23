@@ -2,8 +2,8 @@
 @dbg-flg: false;
 
 @header-height: 100px;
-@body-height: 500px;
-@footer-height: 100px;
+@body-height: 600px;
+@footer-height: 20px;
 
 @header-background: white;
 @body-background: #E6E6E6;
@@ -32,7 +32,10 @@ body {
 		flex: 1 1;  order: 2;
 		background-color: @body-background;
 		padding : @padding-tb @padding-lr;
-		min-height: @body-height; 
+		min-height: 100%; 
+		max-height: 100%; 
+		// height: @body-height;
+		overflow-y: scroll;
 	}
 	.footer {
 		.dbg-border(@dbg-flg, lightgray, solid);

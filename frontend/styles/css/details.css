@@ -5,15 +5,22 @@
   cursor: pointer;
 }
 .details-container {
-  border: 3px solid black;
-  margin: 1px;
-  padding: 1px;
   padding: 20px 25px;
 }
-.details-container .title-container {
-  border: 3px solid blue;
-  margin: 1px;
-  padding: 1px;
+.details-container .tab {
+  background-color: #92278f;
+  text-align: center;
+  margin: 3px;
+  padding: 3px;
+}
+.details-container .tab-text {
+  color: #84bf41;
+  font-size: small;
+  font-weight: normal;
+  text-align: center;
+}
+.details-container .image {
+  width: 250px;
 }
 .details-container .title-container .course-name {
   color: #92278f;
@@ -28,57 +35,45 @@
   text-align: left;
 }
 .details-container .overview-container {
-  border: 3px solid blue;
-  margin: 1px;
-  padding: 1px;
   padding: 15px 0px;
   display: flex;
   flex-flow: row nowrap;
 }
 .details-container .overview-container .image-container {
-  border: 3px solid gray;
-  margin: 1px;
-  padding: 1px;
-  flex: 1 1 30%;
+  max-width: 250px;
+  flex: 1 1 auto;
   order: 1;
+  margin-right: 40px;
 }
 .details-container .overview-container .content-container {
-  border: 3px solid gray;
-  margin: 1px;
-  padding: 1px;
-  flex: 1 1 70%;
+  flex: 1 1 auto;
   order: 2;
 }
 .details-container .overview-container .content-container .tab-container {
-  border: 3px solid orange;
-  margin: 1px;
-  padding: 1px;
   display: flex;
   flex-flow: row nowrap;
 }
 .details-container .overview-container .content-container .tab-container .left {
-  border: 3px solid yellow;
-  margin: 1px;
-  padding: 1px;
   flex: 1 1 auto;
   order: 1;
+  background-color: #92278f;
+  text-align: center;
+  margin: 3px;
+  padding: 3px;
 }
 .details-container .overview-container .content-container .tab-container .middle {
-  border: 3px solid yellow;
-  margin: 1px;
-  padding: 1px;
   flex: 1 1 auto;
   order: 2;
+  background-color: #92278f;
+  text-align: center;
+  margin: 3px;
+  padding: 3px;
 }
 .details-container .overview-container .content-container .tab-container .right {
-  border: 3px solid yellow;
-  margin: 1px;
-  padding: 1px;
   flex: 1 1 auto;
   order: 3;
-}
-.details-container .overview-container .content-container .desc-container {
-  border: 3px solid orange;
-  margin: 1px;
-  padding: 1px;
+  background-color: #92278f;
+  text-align: center;
+  margin: 3px;
+  padding: 3px;
 }

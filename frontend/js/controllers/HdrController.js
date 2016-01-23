@@ -7,7 +7,7 @@ var HdrController = function($scope, $location, dbg ) {
 	$scope.menuSelIdx = 0;
 	$scope.hrdMenu = [ 
 		{  "text"  : "home",    "route" : "" },
-		{  "text"  : "details", "route" : "details" },
+		{  "text"  : "course", "route" : "course" },
 		{  "text"  : "login",   "route" : "login" },
 		{  "text"  : "pay",     "route" : "payment"}];
 
