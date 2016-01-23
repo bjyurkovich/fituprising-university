@@ -29,73 +29,25 @@
 .landing-container {
   padding: 20px 25px;
 }
-.landing-container .tab {
-  background-color: #92278f;
-  text-align: center;
-  margin: 3px;
-  padding: 3px;
-}
-.landing-container .tab-text {
-  color: #84bf41;
-  font-size: small;
-  font-weight: normal;
-  text-align: center;
-}
-.landing-container .video {
-  width: 250px;
+.landing-container .title-container {
+  border-bottom: 3px solid gray;
 }
 .landing-container .title-container .course-name {
   color: #92278f;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: normal;
   text-align: left;
 }
 .landing-container .title-container .instructor {
   color: black;
-  font-size: small;
+  font-size: medium;
   font-weight: normal;
   text-align: left;
 }
-.landing-container .overview-container {
-  padding: 15px 0px;
-  display: flex;
-  flex-flow: row nowrap;
-}
-.landing-container .overview-container .video-container {
-  max-width: 250px;
-  flex: 1 1 auto;
-  order: 1;
-  margin-right: 40px;
-}
-.landing-container .overview-container .content-container {
-  flex: 1 1 auto;
-  order: 2;
-}
-.landing-container .overview-container .content-container .tab-container {
-  display: flex;
-  flex-flow: row nowrap;
-}
-.landing-container .overview-container .content-container .tab-container .left {
-  flex: 1 1 auto;
-  order: 1;
-  background-color: #92278f;
-  text-align: center;
-  margin: 3px;
-  padding: 3px;
-}
-.landing-container .overview-container .content-container .tab-container .middle {
-  flex: 1 1 auto;
-  order: 2;
-  background-color: #92278f;
-  text-align: center;
-  margin: 3px;
-  padding: 3px;
-}
-.landing-container .overview-container .content-container .tab-container .right {
-  flex: 1 1 auto;
-  order: 3;
-  background-color: #92278f;
-  text-align: center;
-  margin: 3px;
-  padding: 3px;
+.landing-container .temp {
+  color: #8cc63f;
+  font-size: x-large;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 100px;
 }

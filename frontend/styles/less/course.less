@@ -1,28 +1,93 @@
 @import "common.less";
 @dbg-flg: false;
 
-@video-width: 250px;
+@video-width: 350px;
 
-.course-container {
+.page-container {
 	.dbg-border(@dbg-flg, black, solid);
 	padding : 20px 25px; // TB RL
 
-	.tab { 
+	.sel {
+		background-color: @fu-lite-green;
+		.set-text(@fu-lite-purple, medium, normal, center);
+	}
+	.unsel {
 		background-color: @fu-lite-purple;
+		.set-text(@fu-lite-green, medium, normal, center);
+
+	}
+	.tab {
 		text-align: center;
 		margin: 3px;
 		padding: 3px;
-		height: 20px;
-		max-width: 150px;
 		.Aligner;
 		.choosable;
 	}
-	.tab-text { 
-		.set-text(@fu-lite-green, small, normal, center);
+
+	.title-container {
+		.dbg-border(@dbg-flg, blue, solid);
+		.course-name { .set-text(@fu-lite-purple, xx-large, normal, left); }
+		.instructor { .set-text(black, medium, normal, left);}
+	}
+
+	.overview-container {
+		.dbg-border(@dbg-flg, blue, solid);
+		padding : 15px 0px; // TB RL
+		display: flex;
+		flex-flow:row nowrap;
+
+		border-top: 3px solid gray; 
+		border-bottom: 3px solid gray; 
+		
+		.video-container {
+			.dbg-border(@dbg-flg, gray, solid);
+			max-width: @video-width;
+			flex: 1 1 auto; order: 1;
+			margin-right: 40px;
+		}
+		.content-container {
+			.dbg-border(@dbg-flg, gray, solid);
+			flex: 1 1 auto; order: 2;
+
+			.tab-container {
+				.dbg-border(@dbg-flg, orange, solid);
+				display: flex;
+				flex-flow:row nowrap;
+
+				.overview-tab {
+					.tab;
+					height: 30px;
+				}
+
+				.left {
+					.dbg-border(@dbg-flg, yellow, solid);
+					flex: 1 1 auto; order: 1;
+					.overview-tab;
+		
+				}
+				.middle {
+					.dbg-border(@dbg-flg, yellow, solid);
+					flex: 1 1 auto; order: 2;
+					.overview-tab;
+
+				}
+				.right {
+					.dbg-border(@dbg-flg, yellow, solid);
+					flex: 1 1 auto; order: 3;
+					.overview-tab;
+
+				}
+
+			}
+			.desc-container {
+				.dbg-border(@dbg-flg, orange, solid);				
+				.set-text(black, small, normal, left);
+			}
+		}
 	}
 
 	.module-title-text {
-		.set-text(@fu-lite-purple, small, bold, center);
+		.set-text(@fu-lite-purple, large, lighter, center);
 		text-align: left
 	}
 
@@ -30,31 +95,6 @@
 		width: @video-width;
 	}
 
-	.banner {
-		.dbg-border(@dbg-flg, magenta, solid);
-/*		display: flex;
-		flex-flow:row nowrap;
-		align-items: flex-start;
-*/
-		.title-container {
-			.dbg-border(@dbg-flg, blue, solid);
-			/*flex: 1 1 30%; order: 1;*/
-			min-width: 300px;
-
-			.course-name { .set-text(@fu-lite-purple, x-large, normal, left); }
-			.instructor { .set-text(black, small, normal, left);}
-		}
-/*		.header-container {
-			.dbg-border(@dbg-flg, blue, solid);			
-			flex: 1 1 70%; order: 2;
-			justify-content: center;
-			.header-text { 
-				.set-text(gray, medium, normal, center); 
-				
-			}
-		}
-*/
-	}
 	.course-container {
 		.dbg-border(@dbg-flg, blue, solid);
 		padding : 15px 0px; // TB RL
@@ -65,7 +105,7 @@
 			flex-flow:row nowrap;
 
 			padding: 20px 0px;  // TB RL
-			border-top: 3px solid @fu-lite-green; 
+			border-bottom: 3px solid @fu-lite-green; 
 
 			.video-container {
 				.dbg-border(@dbg-flg, gray, solid);
@@ -85,12 +125,14 @@
 					.dbg-border(@dbg-flg, orange, solid);
 					//flex: 1 1 auto; order: 1;
 					.module-title-text;
+					margin-bottom: 5px;
 				}
 				.desc-container {
 					.dbg-border(@dbg-flg, orange, solid);
+					.set-text(black, small, normal, left);
 					//flex: 1 1 auto; order: 2;
-					min-height: 90px;
-					max-height: 90px;
+					min-height: 127px;
+					max-height: 127px;
 					overflow-y: scroll;
 				}
 				.tab-container {
@@ -99,16 +141,25 @@
 
 					display: flex;
 					flex-flow:row nowrap;
+
+					.module-tab {
+						.tab;
+						background-color: @fu-lite-purple;
+						.set-text(@fu-lite-green, medium, normal, center);
+						height: 35px;
+						max-width: 150px;
+					}
+
 					.left {
 						.dbg-border(@dbg-flg, yellow, solid);
 						flex: 1 1 auto; order: 1;
-						.tab;
+						.module-tab;
 
 					}
 					.right {
 						.dbg-border(@dbg-flg, yellow, solid);
 						flex: 1 1 auto; order: 2;
-						.tab;			
+						.module-tab;			
 
 					}
 

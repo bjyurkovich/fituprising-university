@@ -7,69 +7,17 @@
 	.dbg-border(@dbg-flg, black, solid);
 	padding : 20px 25px; // TB RL
 
-	.tab { 
-		background-color: @fu-lite-purple;
-		text-align: center;
-		margin: 3px;
-		padding: 3px;
-	}
-	.tab-text { 
-		.set-text(@fu-green, small, normal, center);
-	}
-
-	.video {
-		width: @video-width;
-	}
-
 	.title-container {
 		.dbg-border(@dbg-flg, blue, solid);
-		.course-name { .set-text(@fu-lite-purple, x-large, normal, left); }
-		.instructor { .set-text(black, small, normal, left);}
+		.course-name { .set-text(@fu-lite-purple, xx-large, normal, left); }
+		.instructor { .set-text(black, medium, normal, left);}
+		border-bottom: 3px solid gray; 
 	}
 
-	.overview-container {
-		.dbg-border(@dbg-flg, blue, solid);
-		padding : 15px 0px; // TB RL
-		display: flex;
-		flex-flow:row nowrap;
-
-		.video-container {
-			.dbg-border(@dbg-flg, gray, solid);
-			max-width: @video-width;
-			flex: 1 1 auto; order: 1;
-			margin-right: 40px;
+		.temp { 
+			.set-text(@fu-lite-green, x-large, normal, left); 
+			margin-top : 100px;
+			margin-top : 100px;
 		}
-		.content-container {
-			.dbg-border(@dbg-flg, gray, solid);
-			flex: 1 1 auto; order: 2;
 
-			.tab-container {
-				.dbg-border(@dbg-flg, orange, solid);
-				display: flex;
-				flex-flow:row nowrap;
-				.left {
-					.dbg-border(@dbg-flg, yellow, solid);
-					flex: 1 1 auto; order: 1;
-					.tab;			
-		
-				}
-				.middle {
-					.dbg-border(@dbg-flg, yellow, solid);
-					flex: 1 1 auto; order: 2;
-					.tab;			
-
-				}
-				.right {
-					.dbg-border(@dbg-flg, yellow, solid);
-					flex: 1 1 auto; order: 3;
-					.tab;			
-
-				}
-
-			}
-			.desc-container {
-				.dbg-border(@dbg-flg, orange, solid);				
-			}
-		}
-	}
 }
